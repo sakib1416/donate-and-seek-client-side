@@ -1,24 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from './components/Home/Home/Home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import Donations from './components/Donations/Donations/Donations';
+import AddDonation from './components/Donations/AddDonation/AddDonation';
+import DonationDetails from './components/Donations/DonationDetails/DonationDetails';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/donations">
+          <Donations></Donations>
+        </Route>
+        <Route path="/donation/:id">
+          <DonationDetails></DonationDetails>
+        </Route>
+        <Route path="/addDonation">
+          <AddDonation></AddDonation>
+        </Route>
+        <Route exact path="/">
+          <Home></Home>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
