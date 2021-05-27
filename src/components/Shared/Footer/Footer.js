@@ -42,11 +42,11 @@ const Footer = () => {
                         <div class="col-lg-4 col-md-4">
                             <h3><span>Quick Donation</span></h3>
                             <div>
-                                234/90, Newyork Street , USA
+                                45478, Mülheim an der Ruhr , Germany
                             <br />
                                 Call: +61-123-456-789
                                 <br />
-                                E-mail: support@yourdomin.com
+                                E-mail: support@donateandseek.com
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-style-2 ">DONATE FOR A CHILD</button>

@@ -14,12 +14,19 @@ const DonationDetails = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <h1>Donation details page</h1>
-            <h4>Donation title: {donation.name}</h4>
-            <p>Description: {donation.description}</p>
-            <p><small>Category: {donation.categories}</small></p>
-            <p>Delivery type: {donation.delivery}</p>
-            <img src={`http://localhost:5000/${donation.img}`} alt="" />
+            <div className="container">
+                <div className="row">
+                    <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-sm-12">
+                        <h1>Donation details page</h1>
+                        <h4>Donation title: {donation.name}</h4>
+                        <p>Description: {donation.description}</p>
+                        <p><small>Category: {donation.categories}</small></p>
+                        <p>Delivery type: {donation.delivery}</p>
+                        <img style={{width: '500px', height: '300px'}} src={`http://localhost:5000/${donation.img}`} alt="" />
+                    </div>
+                </div>
+            </div>
+            
             <Footer></Footer>
         </div>
     );

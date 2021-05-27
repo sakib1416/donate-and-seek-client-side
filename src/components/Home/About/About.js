@@ -7,7 +7,7 @@ const About = () => {
                 <div class="container">
                     <div class="row text-center" data-scroll-reveal="enter from the bottom after .3s">
                         <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-                            <h2>ABOUT GIVE HELP </h2>
+                            <h2>ABOUT Donate&Seek </h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit onec molestie non sem vel condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
                         </div>
                     </div>
@@ -19,7 +19,7 @@ const About = () => {
 
                                 </div>
                                 <div class="media-body">
-                                    <h3 class="media-heading">Child Care Center</h3>
+                                    <h3 class="media-heading">Food Donation</h3>
                                     <p>
                                         Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc. 
                                         Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.
@@ -33,7 +33,7 @@ const About = () => {
                                     <i class="fa fa-paperclip fa-5x  icon-round"></i>
                                 </div>
                                 <div class="media-body">
-                                    <h3 class="media-heading">Educate Children</h3>
+                                    <h3 class="media-heading">Education</h3>
                                     <p>
                                         Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc. 
                                         Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.
@@ -47,7 +47,7 @@ const About = () => {
                                     <i class="fa fa-recycle fa-5x  icon-round  "></i>
                                 </div>
                                 <div class="media-body">
-                                    <h3 class="media-heading">Physical Growth</h3>
+                                    <h3 class="media-heading">Helping with Household Appliances</h3>
                                     <p>
                                         Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc. 
                                         Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.

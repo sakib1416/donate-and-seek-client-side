@@ -31,7 +31,7 @@ const Impact = () => {
                                 </div>
                             </div>
                             <div  data-scroll-reveal="enter from the left after .9s">
-                                <h4>Shelter Arrangement</h4>
+                                <h4>Household Appliances</h4>
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style={{width: '90%'}}>
                                         <span >90%</span>
@@ -39,7 +39,7 @@ const Impact = () => {
                                 </div>
                             </div>
                             <div  data-scroll-reveal="enter from the left after 1.1s">
-                                <h4>Fund Utilized</h4>
+                                <h4>Covid Fund</h4>
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style={{width: '98%'}}>
                                         <span >98%</span>

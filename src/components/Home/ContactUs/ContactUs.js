@@ -33,7 +33,7 @@ const ContactUs = () => {
                             <h3><strong>OUR LOCATION </strong></h3>
                             <p>Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
 
-                            <p><strong>ADDRESS :</strong> 2234/908, Newyork City , USA - 002309</p>
+                            <p><strong>ADDRESS :</strong> Mülheim an der Ruhr , Germany - 45478</p>
                             <br />
                             <form role="form">
                                 <div class="input-group">

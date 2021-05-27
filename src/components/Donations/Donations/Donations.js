@@ -22,11 +22,8 @@ const Donations = () => {
                         <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-sm-12">
                             <h3>Categories</h3>
                             <p>
-                            <b>GIVE HELP</b> Comes with Two Variant one is blue and the other is green. These two variants are designed simply and uniquely.
-                                No junk code or unwanted scripts called. We coded it so simply to understand and customize.
-                                Just Use these template and enjoy.   
+                            <b>Donate&Seek</b> CAenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc. Aenean faucibus luctus enim. Duis quis sem risu suspend lacinia elementum nunc.  
                             </p>
-                            
                         </div>
                     </div>
                 </div>

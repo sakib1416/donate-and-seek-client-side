@@ -56,9 +56,9 @@ const Navbar = () => {
         </div>
         <div class="header-sec-bar" >
             <span>
-                <i class="fa fa-envelope-o "></i>support@yourdomain.com 
+                <i class="fa fa-envelope-o "></i>support@donateandseek.com 
                 <i class="fa fa-phone "></i>+61-123-456-789
-                <i class="fa fa-globe"></i>www.yourdomain.com
+                <i class="fa fa-globe"></i>www.donateandseek.com
             </span>
 
         </div>
