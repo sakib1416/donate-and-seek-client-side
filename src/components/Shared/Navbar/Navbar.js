@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { UserContext } from '../../../App';
 
 const Navbar = () => {
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     return (
         <div>
             {/* <div id="pre-div">
@@ -44,11 +46,18 @@ const Navbar = () => {
                                 <span>List of government aids</span>
                             </a>
                         </li>
-                        <li class="dropdown">
-                            <a href="#contact">CONTACT <i class="fa fa-bars"></i>
-                                <span>Reach us Here</span>
-                            </a>
+                        {
+                            loggedInUser.email ? <li class="dropdown">
+                                <Link to="/login">{loggedInUser.name} <i class="fa fa-bars"></i>
+                                    <span>Explore your account</span>
+                                </Link>
+                            </li> 
+                            : <li class="dropdown">
+                            <Link to="/login">LOGIN <i class="fa fa-bars"></i>
+                                <span>Connect with us</span>
+                            </Link>
                         </li>
+                        }
                     </ul>
                 </div>
 
