@@ -12,6 +12,7 @@ import DonationDetails from './components/Donations/DonationDetails/DonationDeta
 import Login from './components/Login/Login';
 import { createContext, useState } from 'react';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import SignUp from './components/Login/SignUp/SignUp';
 
 export const UserContext = createContext();
 
@@ -31,6 +32,9 @@ function App() {
           <PrivateRoute path="/addDonation">
             <AddDonation></AddDonation>
           </PrivateRoute>
+          <Route path="/register">
+            <SignUp></SignUp>
+          </Route>
           <Route path="/login">
             <Login></Login>
           </Route>

@@ -1,9 +1,18 @@
 import React, { useContext } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useHistory } from 'react-router-dom';
 import { UserContext } from '../../../App';
+import {handleSignOut} from '../../Login/LoginManager'
 
 const Navbar = () => {
+    const history = useHistory();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+    const handleLogOut = () => {
+        handleSignOut()
+        .then(response => {
+            setLoggedInUser(response);
+            history.push("/");
+        })
+    }
     return (
         <div>
             {/* <div id="pre-div">
@@ -57,6 +66,13 @@ const Navbar = () => {
                                 <span>Connect with us</span>
                             </Link>
                         </li>
+                        }
+                        {
+                            loggedInUser.email && <li class="dropdown">
+                                <Link onClick={handleLogOut}>Log Out <i class="fa fa-bars"></i>
+                                    <span>Come back again</span>
+                                </Link>
+                            </li>
                         }
                     </ul>
                 </div>
