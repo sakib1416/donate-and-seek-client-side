@@ -46,9 +46,9 @@ const Navbar = () => {
                             </Link>
                         </li>
                         <li class="dropdown">
-                            <a href="#impact">SEEK HELP<i class="fa fa-bars"></i>
+                            <Link to="/seeks">SEEK HELP<i class="fa fa-bars"></i>
                                 <span>Ask what you need</span>
-                            </a>
+                            </Link>
                         </li>
                         <li class="dropdown">
                             <a href="#recent-events">Government Aids<i class="fa fa-bars"></i>

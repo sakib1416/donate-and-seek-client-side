@@ -13,6 +13,10 @@ import Login from './components/Login/Login';
 import { createContext, useState } from 'react';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import SignUp from './components/Login/SignUp/SignUp';
+import UpdateDonation from './components/Donations/UpdateDonation/UpdateDonation';
+import Seeks from './components/Seeks/Seeks/Seeks';
+import AddSeek from './components/Seeks/AddSeek/AddSeek';
+import SeekingDetails from './components/Seeks/SeekingDetails/SeekingDetails';
 
 export const UserContext = createContext();
 
@@ -26,11 +30,23 @@ function App() {
           <Route path="/donations">
             <Donations></Donations>
           </Route>
+          <Route path="/seeks">
+            <Seeks></Seeks>
+          </Route>
+          <PrivateRoute path="/donation/update/:id">
+            <UpdateDonation></UpdateDonation>
+          </PrivateRoute>
           <Route path="/donation/:id">
             <DonationDetails></DonationDetails>
           </Route>
+          <Route path="/seeking/:id">
+            <SeekingDetails></SeekingDetails>
+          </Route>
           <PrivateRoute path="/addDonation">
             <AddDonation></AddDonation>
+          </PrivateRoute>
+          <PrivateRoute path="/addSeek">
+            <AddSeek></AddSeek>
           </PrivateRoute>
           <Route path="/register">
             <SignUp></SignUp>

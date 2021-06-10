@@ -1,17 +1,15 @@
 import React, { useContext } from 'react';
-import Footer from '../../Shared/Footer/Footer';
-import Navbar from '../../Shared/Navbar/Navbar';
-import { useForm } from "react-hook-form";
+import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router';
 import { UserContext } from '../../../App';
+import Footer from '../../Shared/Footer/Footer';
+import Navbar from '../../Shared/Navbar/Navbar';
 
-
-const AddDonation = () => {
+const AddSeek = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const history = useHistory();
-    console.log(loggedInUser.name, loggedInUser.email);
-    const onSubmit = data => {
+    const onSubmit = (data) => {
         console.log(loggedInUser.name, loggedInUser.email);
         const formData = new FormData()
         formData.append('file', data.picture[0]);
@@ -20,40 +18,36 @@ const AddDonation = () => {
         formData.append('location', data.location);
         formData.append('categories', data.categories);
         formData.append('delivery', data.delivery);
-        formData.append('donorName', loggedInUser.name);
-        formData.append('donorEmail', loggedInUser.email);
-        console.log(formData);
-        fetch("http://localhost:5000/addDonation", {
+        formData.append('seekerName', loggedInUser.name);
+        formData.append('seekerEmail', loggedInUser.email);
+        fetch("http://localhost:5000/addSeek", {
             method: "POST",
             body: formData
         })
         .then(response => response.json())
         .then(result => {
             console.log(result);
-            history.push("/donations")
-        })
-        .catch(error => {
-            console.error(error)
+            history.push("/seeks")
         })
     }
     return (
         <div>
             <Navbar></Navbar>
-            <h1 className="content-center">Add your donations</h1>
+            <h1>Post what you are looking for</h1>
             <div style={{width: '400px'}}>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Name</label>
+                            <label for="exampleInputEmail1">Name of the product</label>
                             <input type="text" class="form-control" {...register("name")} placeholder="Give a title"/>
                             <small class="form-text text-muted">We'll never share your information with anyone else.</small>
                         </div>
                         <div class="form-group">
-                            <label for="exampleFormControlTextarea2">Description of your donation</label>
+                            <label for="exampleFormControlTextarea2">Details of the help you need</label>
                             <textarea class="form-control rounded-0" {...register("description")} rows="4"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Location</label>
+                            <label for="exampleInputEmail1">Your Location</label>
                             <input type="text" class="form-control" {...register("location")} placeholder="Type your location"/>
                         </div>
                         <div class="form-group">
@@ -92,4 +86,4 @@ const AddDonation = () => {
     );
 };
 
-export default AddDonation;
+export default AddSeek;

@@ -19,6 +19,19 @@ const SignUp = () => {
         .then(response => {
             if(response.email){
                 //console.log(response.email);
+
+                //adding the user in the database
+                const user = {name, email: data.email};
+                fetch("http://localhost:5000/addUser", {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(user)
+                })
+                .then(response => response.json())
+                .then(result => console.log(result))
+                
                 alert("Your account has been created! Login now to explore")
                 history.push("/login");
             } else {
